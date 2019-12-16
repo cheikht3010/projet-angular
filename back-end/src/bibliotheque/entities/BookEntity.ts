@@ -1,8 +1,8 @@
-import {Column, Entity, PrimaryGeneratedColumn} from 'typeorm';
+import {Column, Entity, PrimaryColumn} from 'typeorm';
 
 @Entity()
 export class BookEntity {
-    @PrimaryGeneratedColumn()
+    @PrimaryColumn()
     lvr_isbn: string;
     @Column({ length: 500 })
     lvr_titre: string;

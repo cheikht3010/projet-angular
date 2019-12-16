@@ -17,6 +17,11 @@ export class BookController {
         return this.bookService.findAll();
     }
 
+    @Get(':isbn')
+    findByIsbn(@Param() params: any): Promise<BookEntity> {
+      return this.bookService.findByIsbn(params.isbn);
+    }
+
     @Post()
     create(@Body() createBook: CreateBook): Promise<Book> {
         return this.bookService.create(createBook);
