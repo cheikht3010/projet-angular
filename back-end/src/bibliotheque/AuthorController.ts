@@ -33,7 +33,7 @@ export class AuthorController {
     }
 
     @Delete(':id')
-    delete(@Param() postId: number) {
-        this.authorService.delete(postId);
+    delete(@Param() authorId: number) {
+        this.authorService.delete(authorId);
     }
 }

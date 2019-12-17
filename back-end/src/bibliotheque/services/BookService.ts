@@ -31,7 +31,7 @@ export class BookService {
         return this.bookRepository.save(editBook);
     }
 
-    public delete(postId: number): void {
-        this.bookRepository.delete(postId);
+    public delete(bookIsbn: string): void {
+        this.bookRepository.delete(bookIsbn);
     }
 }

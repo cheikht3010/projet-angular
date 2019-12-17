@@ -31,7 +31,7 @@ export class AuthorService {
         return this.authorRepository.save(editAuthor);
     }
 
-    public delete(postId: number): void {
-        this.authorRepository.delete(postId);
+    public delete(authorId: number): void {
+        this.authorRepository.delete(authorId);
     }
 }
