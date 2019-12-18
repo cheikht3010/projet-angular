@@ -9,20 +9,25 @@ import { AuthorService } from './services/AuthorService';
 import { ThemeController } from './ThemeController';
 import { ThemeService } from './services/ThemeService';
 import { ThemeEntity } from './entities/ThemeEntity';
+import { CopyEntity } from './entities/CopyEntity';
+import { CopyController } from './CopyController';
+import { CopyService } from './services/CopyService';
 
 @Module({
     imports: [
-        TypeOrmModule.forFeature([BookEntity, AuthorEntity, ThemeEntity]),
+        TypeOrmModule.forFeature([BookEntity, AuthorEntity, ThemeEntity, CopyEntity]),
     ],
     controllers: [
         BookController,
         AuthorController,
         ThemeController,
+        CopyController,
     ],
     providers: [
         BookService,
         AuthorService,
         ThemeService,
+        CopyService,
     ],
 })
 export class BibliothequeModule {
