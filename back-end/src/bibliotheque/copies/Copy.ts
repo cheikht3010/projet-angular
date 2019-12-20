@@ -1,4 +1,4 @@
-import {ThemeEntity} from '../entities/CopyEntity';
+import {CopyEntity} from '../entities/CopyEntity';
 
 export class Copy extends CopyEntity {
 }

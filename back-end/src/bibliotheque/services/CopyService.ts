@@ -22,7 +22,7 @@ export class CopyService {
         const result = await this.copyRepository.find({ exp_id: id });
         return result[0];
     }
-    
+       
     public create(createCopy: CreateCopy): Promise<Copy> {
        return this.copyRepository.save(createCopy);
     }
