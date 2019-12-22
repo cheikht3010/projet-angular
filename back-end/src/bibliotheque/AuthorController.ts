@@ -18,7 +18,7 @@ export class AuthorController {
     }
 
     @Get(':id')
-    findByIsbn(@Param() params: any): Promise<AuthorEntity> {
+    findById(@Param() params: any): Promise<AuthorEntity> {
       return this.authorService.findById(params.id);
     }
 
