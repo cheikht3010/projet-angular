@@ -18,10 +18,13 @@ import { LoanEntity } from './entities/LoanEntity';
 import { ManagerController } from './ManagerController';
 import { ManagerService } from './services/ManagerService';
 import { ManagerEntity } from './entities/ManagerEntity';
+import { ReaderService } from './services/ReaderService';
+import { ReaderController } from './ReaderController';
+import { ReaderEntity } from './entities/ReaderEntity';
 
 @Module({
     imports: [
-        TypeOrmModule.forFeature([BookEntity, AuthorEntity, ThemeEntity, CopyEntity, LoanEntity, ManagerEntity]),
+        TypeOrmModule.forFeature([BookEntity, AuthorEntity, ThemeEntity, CopyEntity, LoanEntity, ManagerEntity, ReaderEntity]),
     ],
     controllers: [
         BookController,
@@ -30,6 +33,7 @@ import { ManagerEntity } from './entities/ManagerEntity';
         CopyController,
         LoanController,
         ManagerController,
+        ReaderController,
     ],
     providers: [
         BookService,
@@ -38,6 +42,7 @@ import { ManagerEntity } from './entities/ManagerEntity';
         CopyService,
         LoanService,
         ManagerService,
+        ReaderService,
     ],
 })
 export class BibliothequeModule {
