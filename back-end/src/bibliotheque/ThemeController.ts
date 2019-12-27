@@ -18,7 +18,7 @@ export class ThemeController {
     }
 
     @Get(':id')
-    findByIsbn(@Param() params: any): Promise<ThemeEntity> {
+    findById(@Param() params: any): Promise<ThemeEntity> {
       return this.themeService.findById(params.id);
     }
 
