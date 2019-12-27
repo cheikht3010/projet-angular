@@ -8,17 +8,19 @@ import { AppareilComponent } from './books/books.component';
 
 
 import { AppareilService } from './services/appareil.service';
-import { ListBookComponent } from './List-book/List-book.component';
+
 import {Routes, RouterModule} from "@angular/router";
 import { DetailComponent } from './detail/detail.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { HomeComponent } from './home/home.component';
+import { BlogModule } from './List-book/ListModule';
+import { PostListComponent } from './List-book/list/PostListComponent';
 
 
 const appRoutes: Routes=[
-  {path: 'listBook', component: ListBookComponent},
+  {path: 'listBook', component: PostListComponent},
   {path: 'listBook/:id', component: DetailComponent},
   {path: 'Reseration/:id', component: ReservationComponent},
   {path: 'Sign-in', component: SignInComponent},
@@ -32,7 +34,6 @@ const appRoutes: Routes=[
   declarations: [
     AppComponent,
     AppareilComponent,
-    ListBookComponent,
     DetailComponent,
     SignInComponent,
     SignUpComponent,
@@ -43,6 +44,7 @@ const appRoutes: Routes=[
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    BlogModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

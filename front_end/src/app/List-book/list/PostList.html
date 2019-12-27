@@ -1,0 +1,7 @@
+<div class="contrainer">
+    <div class="row">
+        <div class="col-3" *ngFor="let item of  postList | async">
+           <p>{{item.lvr_isbn}}</p>
+        </div>
+    </div>
+</div>
