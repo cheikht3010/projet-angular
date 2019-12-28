@@ -21,10 +21,11 @@ import { PostListComponent } from './List-book/list/PostListComponent';
 
 const appRoutes: Routes=[
   {path: 'listBook', component: PostListComponent},
-  {path: 'listBook/:id', component: DetailComponent},
-  {path: 'Reseration', component: ReservationComponent},
+  {path: 'listBook/:lvr_isbn', component: DetailComponent},
+  {path: 'Reseration/:lvr_isbn', component: ReservationComponent},
   {path: 'Sign-in', component: SignInComponent},
   {path: 'Sign-up', component: SignUpComponent},
+  {path: 'Details', component: DetailComponent},
   {path: '', component: HomeComponent}
 ];
 

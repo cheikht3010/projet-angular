@@ -2,6 +2,6 @@
   <li [ngClass] = "{'list-group-item' : true}">
     <h4 [ngStyle]="{color: getColor()}">Titre du livre :{{ lvr_titre }} -- Status : {{ getStatus() }}</h4>
     
-    <a>Detail</a>
-    <a ><button class="btn btn-success" style="margin-left: 90%;" >Reservation</button></a>
+    <a [routerLink]="[lvr_isbn]">Detail</a>
+    <a routerLink="Reseration"><button class="btn btn-success" style="margin-left: 90%;" >Reservation</button></a>
 </li>

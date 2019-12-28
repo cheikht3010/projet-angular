@@ -1,5 +1,18 @@
-
-<h2 style="text-align: center;">{{ name }}</h2>
-<p style="text-align: center;">Status : {{ status }}</p>
-<p style="text-align: center;">Description : {{ Description }}</p>
-<div style="text-align: center;"><a routerLink="/listBook" >Retour a la list</a></div>
+<div class="contrainer">
+    <div class="row">
+        <div class="col-3" *ngFor="let item of  postList | async" >
+            <div class="col-3" *ngFor="let item1 of  authors | async" >
+            <div *ngIf="item.lvr_isbn ===status">
+                <div *ngIf="item.aut_id ===item1.aut_id">
+           <h1 style="text-align: center;">Titre du livre : {{item.lvr_titre}}</h1>
+            <h3><p style="text-align: center;">Isbn du livre : {{item.lvr_isbn}}</p></h3>
+                <h3> <p style="text-align: center;">Nom de l'autheur : {{item1.aut_prenom}} {{item1.aut_nom}}</p></h3>
+                    <h3> <p style="text-align: center;">Date de publication du livre : {{item.lvr_date_de_publication}}</p></h3>
+                        <h3> <p style="text-align: center;">Nombre d'exemplaire du livre : {{item.lvr_nombre_exemplaire}}</p></h3>
+          <h3>  <div style="text-align: center;"><a routerLink="/listBook" >Retour a la list</a></div></h3>
+        </div>
+    </div>
+        </div>
+    </div>
+    </div>
+</div>
