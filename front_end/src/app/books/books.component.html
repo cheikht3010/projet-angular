@@ -1,12 +1,7 @@
-<li [ngClass] = "{'list-group-item' : true, 
-                  'list-group-item-success': appareilStatus === 'Disponible',
-                  'list-group-item-danger' : appareilStatus === 'indisponible'}">
 
-   <!-- <div style="width: 20px; height: 20px; background-color: red;"
-     *ngIf="appareilStatus ==='eteint'" ></div>-->
-    <h4 [ngStyle]="{color: getColor()}" >Titre du livre : {{ appareilName }} -- Status : {{ getStatus() }}</h4>
-    <a [routerLink]="[id]">Detail</a>
-   <!-- <input type="text" class="form-contorl" [(ngModel)]="appareilName">-->
-   <a routerLink="Reseration"><button class="btn btn-success" (click)="offSwitchOff()"
-   [disabled]="appareilStatus==='indisponible'" style="margin-left: 90%;" >Reservation</button></a>
+  <li [ngClass] = "{'list-group-item' : true}">
+    <h4 [ngStyle]="{color: getColor()}">Titre du livre :{{ lvr_titre }} -- Status : {{ getStatus() }}</h4>
+    
+    <a>Detail</a>
+    <a ><button class="btn btn-success" style="margin-left: 90%;" >Reservation</button></a>
 </li>

@@ -22,7 +22,7 @@ import { PostListComponent } from './List-book/list/PostListComponent';
 const appRoutes: Routes=[
   {path: 'listBook', component: PostListComponent},
   {path: 'listBook/:id', component: DetailComponent},
-  {path: 'Reseration/:id', component: ReservationComponent},
+  {path: 'Reseration', component: ReservationComponent},
   {path: 'Sign-in', component: SignInComponent},
   {path: 'Sign-up', component: SignUpComponent},
   {path: '', component: HomeComponent}
@@ -33,7 +33,6 @@ const appRoutes: Routes=[
 @NgModule({
   declarations: [
     AppComponent,
-    AppareilComponent,
     DetailComponent,
     SignInComponent,
     SignUpComponent,
@@ -51,5 +50,6 @@ const appRoutes: Routes=[
     AppareilService,
   ],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

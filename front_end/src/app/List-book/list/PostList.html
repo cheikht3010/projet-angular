@@ -1,7 +1,15 @@
-<div class="contrainer">
-    <div class="row">
-        <div class="col-3" *ngFor="let item of  postList | async">
-           <p>{{item.lvr_isbn}}</p>
-        </div>
-    </div>
-</div>
+
+<div class="col-xs-12">
+    <h2> Nos Livres </h2>
+
+    <ul class="list-group">
+      <app-books *ngFor="let item of postList | async " 
+      [lvr_titre]="item.lvr_titre"
+      [lvr_isbn]="item.lvr_isbn"
+      [lvr_date_de_publication]="item.lvr_date_de_publication"
+      [lvr_nombre_exemplaire]="item.lvr_nombre_exemplaire"
+      [aut_id]="item.aut_id"
+      [thm_id]="item.thm_id"
+      ></app-books>
+    </ul>
+  </div>
