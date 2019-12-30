@@ -17,12 +17,14 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { HomeComponent } from './home/home.component';
 import { BlogModule } from './List-book/ListModule';
 import { PostListComponent } from './List-book/list/PostListComponent';
+import { AdminComponent } from './admin/admin.component';
 
 
 const appRoutes: Routes=[
   {path: 'listBook', component: PostListComponent},
+  {path: 'admin', component: AdminComponent},
   {path: 'listBook/:lvr_isbn', component: DetailComponent},
-  {path: 'Reseration/:lvr_isbn', component: ReservationComponent},
+  {path: 'listBook/Reseration/:lvr_isbn', component: ReservationComponent},
   {path: 'Sign-in', component: SignInComponent},
   {path: 'Sign-up', component: SignUpComponent},
   {path: 'Details', component: DetailComponent},
@@ -39,6 +41,7 @@ const appRoutes: Routes=[
     SignUpComponent,
     ReservationComponent,
     HomeComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

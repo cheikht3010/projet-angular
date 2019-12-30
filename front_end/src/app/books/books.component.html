@@ -3,5 +3,5 @@
     <h4 [ngStyle]="{color: getColor()}">Titre du livre :{{ lvr_titre }} -- Status : {{ getStatus() }}</h4>
     
     <a [routerLink]="[lvr_isbn]">Detail</a>
-    <a routerLink="Reseration"><button class="btn btn-success" style="margin-left: 90%;" >Reservation</button></a>
+    <a routerLink="Reseration/{{lvr_isbn}}" ><button class="btn btn-success" style="margin-left: 90%;" >Reservation</button></a>
 </li>

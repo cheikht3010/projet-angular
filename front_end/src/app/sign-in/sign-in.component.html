@@ -1,3 +1,4 @@
+
 <div ng-app="myApp" ng-controller="myController" class="container">
         <form name="myForm">
           <div class="login-container" style="margin-top: 20%;">
@@ -20,7 +21,7 @@
               <div class="col-md-12">
                 <div class="form-group">
                     <a routerLink="/Sign-up">sign up</a>
-                  <button ng-click="authenticate()" ng-disabled="myForm.$invalid" class="btn btn-success pull-right">Login</button>
+                 <a routerLink="/admin"> <button ng-click="authenticate()" ng-disabled="myForm.$invalid" class="btn btn-success pull-right">Login</button></a>
                   <div class="clearfix"></div>
                 </div>
               </div>
