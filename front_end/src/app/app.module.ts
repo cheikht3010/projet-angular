@@ -11,13 +11,14 @@ import { AppareilService } from './services/appareil.service';
 
 import {Routes, RouterModule} from "@angular/router";
 import { DetailComponent } from './detail/detail.component';
-import { SignInComponent } from './sign-in/sign-in.component';
+import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { HomeComponent } from './home/home.component';
 import { BlogModule } from './List-book/ListModule';
 import { PostListComponent } from './List-book/list/PostListComponent';
 import { AdminComponent } from './admin/admin.component';
+import { AuthComponent } from './auth/auth.component';
 
 
 const appRoutes: Routes=[
@@ -25,7 +26,7 @@ const appRoutes: Routes=[
   {path: 'admin', component: AdminComponent},
   {path: 'listBook/:lvr_isbn', component: DetailComponent},
   {path: 'listBook/Reseration/:lvr_isbn', component: ReservationComponent},
-  {path: 'Sign-in', component: SignInComponent},
+  {path: 'Sign-in', component: AuthComponent},
   {path: 'Sign-up', component: SignUpComponent},
   {path: 'Details', component: DetailComponent},
   {path: '', component: HomeComponent}
@@ -42,6 +43,7 @@ const appRoutes: Routes=[
     ReservationComponent,
     HomeComponent,
     AdminComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
