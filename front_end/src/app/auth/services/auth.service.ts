@@ -1,11 +1,12 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { ApiConfig } from 'src/app/List-book/ApiConfig';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  url = 'http://localhost:3000/auth/';
+  private readonly url = ApiConfig.url
   user: any = {status: 404, access_token: ''};
   isAuth = false;
 
@@ -17,15 +18,13 @@ export class AuthService {
       this.isAuth = true;
       this.httpClient.post(this.url + type, body).subscribe(
         (val) => {
-          console.log('POST call successful value returned in body : ', val);
           this.user = val;
           resolve(this.user);
         },
         (response) => {
-          console.log('POST call in error', response);
         },
         () => {
-          console.log('The POST observable is now completed.');
+          console.log('The POST completed.');
         }
       );
     }));
