@@ -1,10 +1,10 @@
 import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
 import {Observable} from 'rxjs';
-import {AuthorService} from './services/AuthorService';
-import {AuthorEntity} from './entities/AuthorEntity';
-import {CreateAuthor} from './authors/CreateAuthor';
-import {Author} from './authors/Author';
-import {EditAuthor} from './authors/EditAuthor';
+import {AuthorService} from '../services/AuthorService';
+import {AuthorEntity} from '../entities/AuthorEntity';
+import {CreateAuthor} from '../authors/CreateAuthor';
+import {Author} from '../authors/Author';
+import {EditAuthor} from '../authors/EditAuthor';
 
 @Controller('authors')
 export class AuthorController {

@@ -1,10 +1,10 @@
 import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
 import {Observable} from 'rxjs';
-import {ManagerService} from './services/ManagerService';
-import {ManagerEntity} from './entities/ManagerEntity';
-import {CreateManager} from './managers/CreateManager';
-import {Manager} from './managers/Manager';
-import {EditManager} from './managers/EditManager';
+import {ManagerService} from '../services/ManagerService';
+import {ManagerEntity} from '../entities/ManagerEntity';
+import {CreateManager} from '../managers/CreateManager';
+import {Manager} from '../managers/Manager';
+import {EditManager} from '../managers/EditManager';
 
 @Controller('managers')
 export class ManagerController {

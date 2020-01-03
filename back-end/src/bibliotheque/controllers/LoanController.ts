@@ -1,10 +1,10 @@
 import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
 import {Observable} from 'rxjs';
-import {LoanService} from './services/LoanService';
-import {LoanEntity} from './entities/LoanEntity';
-import {CreateLoan} from './loans/CreateLoan';
-import {Loan} from './loans/Loan';
-import {EditLoan} from './loans/EditLoan';
+import {LoanService} from '../services/LoanService';
+import {LoanEntity} from '../entities/LoanEntity';
+import {CreateLoan} from '../loans/CreateLoan';
+import {Loan} from '../loans/Loan';
+import {EditLoan} from '../loans/EditLoan';
 
 @Controller('loans')
 export class LoanController {
