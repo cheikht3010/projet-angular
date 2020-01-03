@@ -1,10 +1,10 @@
 import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
 import {Observable} from 'rxjs';
-import {ReaderService} from './services/ReaderService';
-import {ReaderEntity} from './entities/ReaderEntity';
-import {CreateReader} from './readers/CreateReader';
-import {Reader} from './readers/Reader';
-import {EditReader} from './readers/EditReader';
+import {ReaderService} from '../services/ReaderService';
+import {ReaderEntity} from '../entities/ReaderEntity';
+import {CreateReader} from '../readers/CreateReader';
+import {Reader} from '../readers/Reader';
+import {EditReader} from '../readers/EditReader';
 
 @Controller('readers')
 export class ReaderController {

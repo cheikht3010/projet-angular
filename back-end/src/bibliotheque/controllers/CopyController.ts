@@ -1,10 +1,10 @@
 import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
 import {Observable} from 'rxjs';
-import {CopyService} from './services/CopyService';
-import {CopyEntity} from './entities/CopyEntity';
-import {CreateCopy} from './copies/CreateCopy';
-import {Copy} from './copies/Copy';
-import {EditCopy} from './copies/EditCopy';
+import {CopyService} from '../services/CopyService';
+import {CopyEntity} from '../entities/CopyEntity';
+import {CreateCopy} from '../copies/CreateCopy';
+import {Copy} from '../copies/Copy';
+import {EditCopy} from '../copies/EditCopy';
 
 @Controller('copies')
 export class CopyController {

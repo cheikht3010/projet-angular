@@ -1,10 +1,10 @@
 import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
 import {Observable} from 'rxjs';
-import {BookService} from './services/BookService';
-import {BookEntity} from './entities/BookEntity';
-import {CreateBook} from './books/CreateBook';
-import {Book} from './books/Book';
-import {EditBook} from './books/EditBook';
+import {BookService} from '../services/BookService';
+import {BookEntity} from '../entities/BookEntity';
+import {CreateBook} from '../books/CreateBook';
+import {Book} from '../books/Book';
+import {EditBook} from '../books/EditBook';
 
 @Controller('books')
 export class BookController {
