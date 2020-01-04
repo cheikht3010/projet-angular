@@ -19,4 +19,12 @@ export class PostResource {
     public findAllAuthors(): Promise<Authors[]> {
         return this.httpClient.get(this.URLAuthors) as unknown as Promise<Authors[]>;
      }
+     async getByIsbn(id: number) {
+        console.log(this.URL + 'get/' + id);
+        return await new Promise((resolve) => {
+          this.httpClient.get(this.URL + 'get/' + id).subscribe(value => {
+            resolve(value);
+          });
+        });
+      }
 }
