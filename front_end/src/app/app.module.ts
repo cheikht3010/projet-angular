@@ -12,7 +12,7 @@ import { AppareilService } from './services/appareil.service';
 import {Routes, RouterModule} from "@angular/router";
 import { DetailComponent } from './detail/detail.component';
 import { SignInComponent } from './auth/sign-in/sign-in.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { HomeComponent } from './home/home.component';
 import { BlogModule } from './List-book/ListModule';

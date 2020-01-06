@@ -24,7 +24,7 @@ export class AuthService {
         (response) => {
         },
         () => {
-          console.log('The POST completed.');
+          console.log('completed.');
         }
       );
     }));
