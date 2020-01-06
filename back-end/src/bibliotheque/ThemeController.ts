@@ -1,10 +1,10 @@
 import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
 import {Observable} from 'rxjs';
-import {ThemeService} from '../services/ThemeService';
-import {ThemeEntity} from '../entities/ThemeEntity';
-import {CreateTheme} from '../themes/CreateTheme';
-import {Theme} from '../themes/Theme';
-import {EditTheme} from '../themes/EditTheme';
+import {ThemeService} from './services/ThemeService';
+import {ThemeEntity} from './entities/ThemeEntity';
+import {CreateTheme} from './themes/CreateTheme';
+import {Theme} from './themes/Theme';
+import {EditTheme} from './themes/EditTheme';
 
 @Controller('themes')
 export class ThemeController {

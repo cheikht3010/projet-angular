@@ -11,7 +11,7 @@ import {EditAccount} from '../accounts/EditAccount';
 
 @Injectable()
 export class AccountService {
-    constructor(@InjectRepository(AccountEntity) private accountRepository: Repository<AccountEntity>) {
+    constructor(@InjectRepository(AccountEntity) private readonly accountRepository: Repository<AccountEntity>) {
     }
 
     async findAll(): Promise<AccountEntity[]> {
@@ -22,9 +22,24 @@ export class AccountService {
         const result = await this.accountRepository.find({ cpt_pseudo: pseudo });
         return result[0];
     }
-    
+/*    
     public create(createAccount: CreateAccount): Promise<Account> {
        return this.accountRepository.save(createAccount);
+    }
+*/
+    public create(){
+        const pr1 = <Account>({
+        cpt_pseudo: 'dodo',
+        cpt_mot_de_passe: 'dodo',
+        cpt_sel: 'sel'});
+        this.accountRepository.save(pr1);
+
+        const pr2 = <Account>({
+            cpt_pseudo: 'papa',
+            cpt_mot_de_passe: 'papa',
+            cpt_sel: 'sel'});
+            this.accountRepository.save(pr2);
+
     }
 
     public edit(editAccount: EditAccount): Promise<Account> {

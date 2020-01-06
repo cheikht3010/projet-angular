@@ -1,18 +1,25 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Account } from '../accounts/Account';
-import { AccountService } from '../services/AccountService';
+import { User } from './account/account.entity';
+import { AccountService } from './account/account.service';
 import { JwtModule } from '@nestjs/jwt';
-import { AuthService } from '../services/auth.service';
-import { AuthController } from '../controllers/auth.controller';
+import { AuthService } from './auth/auth.service';
+import { AuthController } from './auth.controller';
+import { Jwt } from './auth/jwt-strategy/jwt.service';
+import { LocalStrategy } from './auth/local/local.service';
+import { jwtConstants } from './auth/jwt-strategy/jwt.constants';
 
 @Module({
-    imports: [TypeOrmModule.forFeature([Account]),
+  imports: [
+
     JwtModule.register({
-        secretOrPrivateKey: 'secret12356789'
-    })
-    ],
-    providers: [AccountService, AuthService],
-    controllers: [AuthController]
+      secret: jwtConstants.secret,
+    }),
+    TypeOrmModule.forFeature([User]),
+  ],
+  providers: [AccountService, AuthService, LocalStrategy, Jwt],
+  controllers: [AuthController],
 })
-export class AuthModule { }
+
+export class AuthModule {
+}
