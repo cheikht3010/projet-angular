@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
 
+const found = 'found';
+const create = 'create';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -11,6 +13,8 @@ export class SignInComponent implements OnInit {
   reactiveFormLogin: any;
   router: any;
   formBuilder: any;
+  status: string;
+  reactiveFormRegister: any;
 
   constructor() { }
 
@@ -20,15 +24,28 @@ export class SignInComponent implements OnInit {
       password: ['', [Validators.required]]
     });
   }  
+
   onLogin(type: string) {
-    this.authService.singIn(this.reactiveFormLogin.value, type).then(
-      (user: any) => {
-        if (200 === user.status) {
+    console.log('login : ', this.reactiveFormLogin.value);
+    this.authService.singIn(this.reactiveFormLogin.value, 'login').then(
+      (result: any) => {
+        if (found === result.code) {
+          this.status = 'User is found';
+          console.log(found);
           this.router.navigate(['listBook']);
+        } else if (create === result.code) {
+          this.status = 'User is created';
+          console.log(create);
+          this.router.navigate(['listBook']);
+        } else {
+          this.status = 'User is not found';
         }
       }
     );
   }
+ 
+
+
   get name() {
     return this.reactiveFormLogin.get('name');
   }

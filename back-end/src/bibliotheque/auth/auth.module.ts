@@ -14,6 +14,7 @@ import { jwtConstants } from './auth/jwt-strategy/jwt.constants';
 
     JwtModule.register({
       secret: jwtConstants.secret,
+      signOptions: { expiresIn: '90s' },
     }),
     TypeOrmModule.forFeature([User]),
   ],
