@@ -30,7 +30,7 @@
     "sq": "0.0.1",
     "sqlite": "^3.0.3",
     "sqlite3": "^4.1.1",
-    "typeorm": "^0.2.21"
+    "typeorm": "^0.2.25"
   },
   "devDependencies": {
     "@nestjs/cli": "^6.9.0",
